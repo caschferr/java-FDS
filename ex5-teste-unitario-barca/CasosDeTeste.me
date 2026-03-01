@@ -1,0 +1,32 @@
+Variaveis de entrada:
+- (Fn)Fila do Assento (informada explicitamente como parâmetro da função)
+- (Qn)Quantidade de passageiros (controlada pelo sistema)
+- (On)Ocupação do assento (controlada pelo sistema)
+Classes de equivalência
+- F1: [0..20]
+- F2: [21..39]
+- F3: [40..60]
+- F4: indicador de assento inválido
+- Q1: [0..100]
+- Q2: [101..200]
+- Q3: [201..1200]
+- O1: assento ocupado
+- O2: assento desocupado
+
+Casos de teste:
+
+F1,Q1,O1: F10A12,50,ocp --> 1
+F1,Q1,O2: F12A10,55,não --> 3
+F1,Q2,O2: F02A19,101,não --> 2
+F1,Q3,O2: F01A01,250,não --> 3
+
+F2,Q1,O2: F25A10,55,não --> 2
+F2,Q2,O2: F30A19,110,não --> 2
+F2,Q3,O2: F39A01,150,não --> 3
+
+F3,Q1,O2: F45A10,55,não --> 2
+F3,Q2,O2: F50A19,110,não --> 3
+F3,Q3,O2: F59A01,150,não --> 3
+
+F4,Q2,O2: FA70A03,150,não --> 0
+F4,Q2,O2: FA02A99,150,não --> 0
